@@ -14,15 +14,15 @@ const NAV = [
 export const Footer = () => (
   <footer className="section-dark relative overflow-hidden rounded-t-[2rem] sm:rounded-t-[2.75rem] border-t border-gold-700/25 pb-10 pt-16 sm:pt-20">
     <div className="container">
-      <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
+      <div className="grid gap-10 text-center lg:grid-cols-[1.2fr_0.8fr_1fr] lg:gap-12 lg:text-left">
         <div>
           <img
             src="/logo.png"
             alt="Artesanal Car Martelinho de Ouro"
-            className="h-16 w-auto"
+            className="mx-auto h-16 w-auto lg:mx-0"
             loading="lazy"
           />
-          <p className="mt-5 max-w-sm text-pretty text-sm leading-relaxed text-white/55">
+          <p className="mx-auto mt-5 hidden max-w-sm text-pretty text-sm leading-relaxed text-white/55 lg:mx-0 lg:block">
             Martelinho de Ouro e estética automotiva completa há 13 anos no
             Tocantins. Referência técnica em Palmas, Paraíso e Araguaína, e a
             escolha das concessionárias da região.
@@ -39,7 +39,7 @@ export const Footer = () => (
           </a>
         </div>
 
-        <nav>
+        <nav className="hidden lg:block">
           <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-400">
             Navegue
           </h3>
@@ -61,9 +61,9 @@ export const Footer = () => (
           <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-400">
             Contato e unidades
           </h3>
-          <ul className="mt-5 flex flex-col gap-4 text-sm text-white/60">
-            <li className="flex gap-3">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
+          <ul className="mt-5 flex flex-col items-center gap-3.5 text-sm text-white/60 lg:items-start lg:gap-4">
+            <li className="flex justify-center gap-3 text-center lg:justify-start lg:text-left">
+              <Phone className="mt-0.5 hidden h-4 w-4 shrink-0 text-gold-500 lg:block" />
               <a
                 href={WA.final}
                 target="_blank"
@@ -73,8 +73,8 @@ export const Footer = () => (
                 {SITE_PHONE}
               </a>
             </li>
-            <li className="flex gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
+            <li className="flex justify-center gap-3 text-center lg:justify-start lg:text-left">
+              <MapPin className="mt-0.5 hidden h-4 w-4 shrink-0 text-gold-500 lg:block" />
               <span>
                 Palmas — Q. 402 Sul, Av. LO 11, 1b, Plano Diretor Sul,
                 77016-524
@@ -84,16 +84,16 @@ export const Footer = () => (
                 Araguaína — consulte pelo WhatsApp
               </span>
             </li>
-            <li className="flex gap-3">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
+            <li className="flex justify-center gap-3 text-center lg:justify-start lg:text-left">
+              <Clock className="mt-0.5 hidden h-4 w-4 shrink-0 text-gold-500 lg:block" />
               <span>
                 Segunda a sexta, 08h às 18h
                 <br />
                 Sábado, 08h às 12h (Palmas e Araguaína)
               </span>
             </li>
-            <li className="flex gap-3">
-              <Globe className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
+            <li className="flex justify-center gap-3 text-center lg:justify-start lg:text-left">
+              <Globe className="mt-0.5 hidden h-4 w-4 shrink-0 text-gold-500 lg:block" />
               <a
                 href="https://artesanalcar.com.br/"
                 target="_blank"
