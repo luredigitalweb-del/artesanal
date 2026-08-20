@@ -50,8 +50,15 @@ export const Differentials = () => (
         eyebrow="Por que a Artesanal Car"
         title={
           <>
-            Não é só consertar. É devolver o carro{" "}
-            <span className="shiny">do jeito que ele saiu de fábrica</span>
+            <span className="sm:hidden">
+              Do jeito que ele
+              <br />
+              <span className="shiny inline-block">saiu de fábrica</span>
+            </span>
+            <span className="hidden sm:inline">
+              Não é só consertar. É devolver o carro{" "}
+              <span className="shiny">do jeito que ele saiu de fábrica</span>
+            </span>
           </>
         }
         description="Nossos clientes chegam pela confiança e voltam pela qualidade. Estes são os motivos que aparecem em toda avaliação que recebemos."

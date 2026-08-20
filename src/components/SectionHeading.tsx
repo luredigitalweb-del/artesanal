@@ -34,7 +34,7 @@ export const SectionHeading = ({
     )}
 
     <Reveal delay={80}>
-      <h2 className="max-w-3xl text-balance text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[2.9rem]">
+      <h2 className="max-w-3xl text-balance text-[1.7rem] font-bold leading-[1.08] tracking-tight min-[400px]:text-3xl sm:text-4xl lg:text-[2.9rem]">
         {title}
       </h2>
     </Reveal>

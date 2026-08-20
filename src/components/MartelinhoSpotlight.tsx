@@ -53,13 +53,12 @@ export const MartelinhoSpotlight = () => (
 
     <div className="container relative">
       <SectionHeading
-        eyebrow="A técnica que nos tornou referência"
+        eyebrow="Martelinho de Ouro"
         title={
           <>
-            Martelinho de Ouro por quem
-            <br />
-            <span className="shiny inline-block">trouxe a técnica</span> ao
-            Tocantins
+            Quem trouxe{" "}
+            <span className="shiny inline-block">a técnica</span>
+            <br className="sm:hidden" /> ao Tocantins
           </>
         }
         description="Quando a Artesanal Car chegou em Palmas, quase ninguém acreditava que dava para tirar um amassado sem pintar. Treze anos depois, somos a oficina para quem as concessionárias mandam os carros mais exigentes."
@@ -67,10 +66,10 @@ export const MartelinhoSpotlight = () => (
 
       {/* As duas colunas se esticam para a mesma altura: à esquerda os passos
           dividem o espaço, à direita a foto grande absorve a sobra. */}
-      <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-2">
+      <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         {/* No celular os passos viram carrossel contínuo, com a lista duplicada
             e deslocamento até -50% para o laço ficar imperceptível. */}
-        <Reveal className="group relative -mx-5 overflow-hidden lg:hidden">
+        <Reveal className="group relative -mx-5 min-w-0 overflow-hidden lg:hidden">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-ink to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-ink to-transparent" />
 

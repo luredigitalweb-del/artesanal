@@ -38,8 +38,8 @@ export const InstagramSection = () => (
     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_20%,rgba(217,182,78,0.16)_0%,transparent_70%)]" />
 
     <div className="container relative">
-      <div className="grid items-center gap-14 lg:grid-cols-[1fr_auto] lg:gap-20">
-        <div className="text-center lg:text-left">
+      <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-20">
+        <div className="min-w-0 text-center lg:text-left">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold-700/30 bg-gold-700/[0.06] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-gold-700">
               <Instagram className="h-3.5 w-3.5" />
@@ -63,7 +63,7 @@ export const InstagramSection = () => (
 
           {/* No celular os tópicos viram carrossel contínuo; a partir de lg
               voltam a ser uma coluna. */}
-          <Reveal className="group relative -mx-5 mt-9 overflow-hidden lg:hidden">
+          <Reveal className="group relative -mx-5 mt-9 min-w-0 overflow-hidden lg:hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#F6F5F2] to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#F6F5F2] to-transparent" />
 
