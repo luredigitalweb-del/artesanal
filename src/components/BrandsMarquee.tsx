@@ -52,16 +52,20 @@ const BrandMark = ({
   }
 
   return (
-    <img
-      src={`/marcas/${slug}.${step === 0 ? "svg" : "png"}`}
-      alt={name}
-      decoding="async"
-      onError={() => setStep((current) => current + 1)}
+    <span
       className={cn(
-        "w-auto object-contain opacity-60 transition-opacity duration-300 hover:opacity-100",
-        wide ? "h-[22px] sm:h-[26px]" : "h-8 sm:h-10"
+        "flex shrink-0 items-center justify-center",
+        wide ? "h-[26px] w-[86px]" : "h-9 w-11 sm:h-10 sm:w-12"
       )}
-    />
+    >
+      <img
+        src={`/marcas/${slug}.${step === 0 ? "svg" : "png"}`}
+        alt={name}
+        decoding="async"
+        onError={() => setStep((current) => current + 1)}
+        className="max-h-full max-w-full object-contain opacity-70 transition-opacity duration-300 hover:opacity-100"
+      />
+    </span>
   );
 };
 
@@ -76,14 +80,14 @@ export const BrandsMarquee = ({ className }: { className?: string }) => (
       className
     )}
   >
-    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-ink to-transparent sm:w-24" />
-    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-ink to-transparent sm:w-24" />
+    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-7 bg-gradient-to-r from-ink to-transparent sm:w-20" />
+    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-7 bg-gradient-to-l from-ink to-transparent sm:w-20" />
 
-    <div className="flex w-max animate-marquee-x items-center gap-8 sm:gap-12">
+    <div className="flex w-max animate-marquee-x items-center gap-6 sm:gap-12">
       {[...BRANDS, ...BRANDS].map((brand, i) => (
         <span
           key={`${brand.slug}-${i}`}
-          className="flex shrink-0 items-center gap-8 sm:gap-12"
+          className="flex shrink-0 items-center gap-6 sm:gap-12"
         >
           <BrandMark name={brand.name} slug={brand.slug} wide={brand.wide} />
           <span className="h-1 w-1 shrink-0 rounded-full bg-gold-500/60" />

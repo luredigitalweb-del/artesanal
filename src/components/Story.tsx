@@ -49,7 +49,7 @@ export const Story = () => (
     {/* Linha do tempo deitada: no desktop os cinco marcos dividem a largura e o
         fio corre atrás dos pontos; abaixo de lg vira rolagem lateral. */}
     <Reveal className="relative mt-14">
-      <span className="pointer-events-none absolute inset-x-0 top-[5px] hidden h-px bg-gradient-to-r from-transparent via-gold-700/35 to-transparent lg:block" />
+      <span className="pointer-events-none absolute inset-x-0 top-[5px] h-px bg-gradient-to-r from-transparent via-gold-700/35 to-transparent" />
 
       <ol className="no-scrollbar mx-auto flex snap-x snap-mandatory gap-6 overflow-x-auto px-5 lg:grid lg:max-w-[1280px] lg:grid-cols-5 lg:overflow-visible">
         {TIMELINE.map((item) => (
