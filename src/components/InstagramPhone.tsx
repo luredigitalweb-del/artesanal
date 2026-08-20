@@ -167,7 +167,7 @@ export const InstagramPhone = () => (
                       <img
                         src={item.src}
                         alt={item.label}
-                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full rounded-full object-cover"
                       />
                     </span>
