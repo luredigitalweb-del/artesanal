@@ -1,0 +1,17 @@
+# dependências
+node_modules
+
+# build
+dist
+dist-ssr
+*.local
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# material de origem enviado pelo cliente (fica só na máquina)
+_assets
+clickup-attachments-*.zip
+Artesanal_car___Martelinho_de_ouro_em_Palmas.html
+WhatsApp Image *.jpeg

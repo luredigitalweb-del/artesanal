@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MontserratArtesanal";
+  src: url("/fonts/Montserrat-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 40 30% 96%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 40 30% 96%;
+
+    --primary: 45 65% 58%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 8% 64%;
+
+    --accent: 45 84% 65%;
+    --accent-foreground: 0 0% 5%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 45 65% 58%;
+
+    --radius: 0.9rem;
+
+    /* granulado sutil, usado como ultima camada das superficies */
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.055'/%3E%3C/svg%3E");
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink text-foreground font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #D9B64E;
+    color: #0D0D0D;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0D0D0D;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8C6418, #D9B64E);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  /* ---------- Shiny highlighted words ---------- */
+  .shiny {
+    background-image: linear-gradient(
+      110deg,
+      #8c6418 12%,
+      #f2cb57 30%,
+      #fff8e2 42%,
+      #f2cb57 54%,
+      #8c6418 74%
+    );
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shiny 4.5s linear infinite;
+    padding-right: 0.06em;
+  }
+
+  .section-light .shiny {
+    background-image: linear-gradient(
+      110deg,
+      #6f4d12 12%,
+      #a9821f 30%,
+      #e0b743 42%,
+      #a9821f 54%,
+      #6f4d12 74%
+    );
+  }
+
+  /* ---------- Shimmer on buttons ---------- */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    bottom: -60%;
+    left: 0;
+    width: 32%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.55),
+      transparent
+    );
+    transform: translateX(-130%) skewX(-20deg);
+    animation: shimmer 3.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .shimmer-dark::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(242, 203, 87, 0.42),
+      transparent
+    );
+  }
+
+  /* ---------- Section skins ----------
+     Cada superficie recebe tres camadas de textura, nesta ordem:
+     brilho dourado suave no canto, fio diagonal fino e granulado.
+     Tudo em background-image, entao nada fica sobre o conteudo. */
+  .section-dark {
+    @apply bg-ink text-foreground;
+    background-image:
+      radial-gradient(
+        75% 55% at 100% 0%,
+        rgba(217, 182, 78, 0.07) 0%,
+        transparent 62%
+      ),
+      repeating-linear-gradient(
+        135deg,
+        rgba(217, 182, 78, 0.035) 0 1px,
+        transparent 1px 13px
+      ),
+      var(--grain);
+    background-size: 100% 100%, auto, 180px 180px;
+    background-repeat: no-repeat, repeat, repeat;
+  }
+
+  .section-light {
+    @apply bg-[#F6F5F2] text-ink;
+    background-image:
+      radial-gradient(
+        70% 55% at 0% 0%,
+        rgba(217, 182, 78, 0.13) 0%,
+        transparent 60%
+      ),
+      repeating-linear-gradient(
+        135deg,
+        rgba(140, 100, 24, 0.03) 0 1px,
+        transparent 1px 13px
+      ),
+      var(--grain);
+    background-size: 100% 100%, auto, 180px 180px;
+    background-repeat: no-repeat, repeat, repeat;
+  }
+
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d9b64e, transparent);
+  }
+
+  .card-dark {
+    background: linear-gradient(160deg, #161616 0%, #101010 100%);
+    border: 1px solid rgba(217, 182, 78, 0.16);
+  }
+  .card-light {
+    background: #fff;
+    border: 1px solid rgba(140, 100, 24, 0.16);
+  }
+
+  .gold-frame {
+    background: linear-gradient(
+      145deg,
+      #8c6418 0%,
+      #f2cb57 22%,
+      #fff3cf 38%,
+      #d9b64e 58%,
+      #8c6418 82%,
+      #f2cb57 100%
+    );
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .phone-scroll::-webkit-scrollbar {
+    width: 0;
+  }
+  .phone-scroll {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiny,
+  .shimmer::after,
+  .animate-marquee-x,
+  .animate-slow-zoom,
+  .animate-bounce {
+    animation: none !important;
+  }
+  .shiny {
+    background-position: 50% center;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

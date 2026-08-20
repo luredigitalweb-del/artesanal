@@ -1,0 +1,40 @@
+LOGOS DAS MARCAS
+================
+
+Salve cada logo neste diretorio usando exatamente estes nomes de arquivo.
+Prefira .svg; se so tiver .png, funciona igual (o codigo tenta svg e depois png).
+
+REQUISITOS
+- Fundo TRANSPARENTE (as logos sao pintadas de branco automaticamente)
+- Apenas o simbolo, ou simbolo + nome; evite molduras e fundos coloridos
+- Baixe dos press kits / brand centers oficiais de cada montadora
+
+ARQUIVOS ESPERADOS
+  toyota.svg
+  volkswagen.svg
+  chevrolet.svg
+  fiat.svg
+  hyundai.svg
+  honda.svg
+  jeep.svg
+  renault.svg
+  nissan.svg
+  ford.svg
+  peugeot.svg
+  citroen.svg
+  mitsubishi.svg
+  ram.svg
+  caoa-chery.svg
+  byd.svg
+  gwm.svg
+  volvo.svg
+  bmw.svg
+  mercedes-benz.svg
+  audi.svg
+  land-rover.svg
+
+Enquanto o arquivo nao existir, a faixa mostra o nome da marca em texto.
+Nao e preciso alterar nenhum codigo: basta soltar o arquivo aqui.
+
+Para adicionar ou remover marcas, edite a lista BRANDS em
+src/components/BrandsMarquee.tsx
