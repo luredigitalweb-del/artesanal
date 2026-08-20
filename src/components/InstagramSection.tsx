@@ -63,7 +63,7 @@ export const InstagramSection = () => (
 
           {/* No celular os tópicos viram carrossel contínuo; a partir de lg
               voltam a ser uma coluna. */}
-          <Reveal className="group relative -mx-5 mt-9 min-w-0 overflow-hidden lg:hidden">
+          <Reveal className="group relative -mx-5 mt-5 min-w-0 overflow-hidden py-4 lg:hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#F6F5F2] to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#F6F5F2] to-transparent" />
 

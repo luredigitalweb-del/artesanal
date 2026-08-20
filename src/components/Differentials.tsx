@@ -67,7 +67,7 @@ export const Differentials = () => (
 
     {/* Carrossel contínuo: a lista é duplicada e o deslocamento vai até -50%,
         o que faz o laço ser imperceptível. Passar o mouse pausa o movimento. */}
-    <Reveal className="group relative mt-14 overflow-hidden">
+    <Reveal className="group relative mt-10 overflow-hidden py-4">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#F6F5F2] to-transparent sm:w-24" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#F6F5F2] to-transparent sm:w-24" />
 
