@@ -111,10 +111,10 @@ export const MartelinhoSpotlight = () => (
             <Reveal delay={180}>
               <div className="h-full overflow-hidden rounded-[1.5rem] border border-gold-400/20">
                 <img
-                  src="/fotos/vitrificacao-kicks.jpg"
-                  alt="Veículo com pintura vitrificada pela Artesanal Car"
+                  src="/fotos/euler.jpg"
+                  alt="Euler, fundador da Artesanal Car, segurando o martelinho"
                   loading="lazy"
-                  className="h-40 w-full object-cover sm:h-full"
+                  className="h-40 w-full object-cover object-[center_30%] sm:h-full sm:object-center"
                 />
               </div>
             </Reveal>
