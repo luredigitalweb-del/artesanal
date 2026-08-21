@@ -195,7 +195,7 @@ export const InstagramPhone = () => (
               </span>
             </div>
 
-            <div className="grid grid-cols-3 gap-[2px] pb-6">
+            <div className="grid grid-cols-3 gap-[2px] pb-[26px]">
               {POSTS.map((post, i) => (
                 <a
                   key={post.src}
@@ -221,8 +221,11 @@ export const InstagramPhone = () => (
               ))}
             </div>
 
-                <div className="sticky bottom-0 flex justify-center bg-gradient-to-t from-black via-black/85 to-transparent pb-2 pt-5">
-                  <span className="h-1 w-28 rounded-full bg-white/70" />
+                {/* Indicador de home: fica colado no rodape da tela do aparelho.
+                    A altura precisa casar com o respiro da grade acima, senao
+                    o degrade avanca sobre a ultima fileira de posts. */}
+                <div className="sticky bottom-0 flex h-[26px] items-end justify-center bg-gradient-to-t from-black via-black/70 to-transparent pb-1.5">
+                  <span className="h-1 w-24 rounded-full bg-white/70" />
                 </div>
               </div>
             </div>
