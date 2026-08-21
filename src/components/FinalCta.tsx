@@ -5,18 +5,18 @@ import { WA } from "@/lib/site";
 const STEPS = [
   {
     icon: Camera,
-    title: "Mande a foto",
-    text: "Envie uma foto do amassado ou descreva o serviço que precisa.",
+    title: "Chame no WhatsApp",
+    text: "Mande uma foto do amassado ou diga qual serviço o carro precisa.",
   },
   {
     icon: Timer,
-    title: "Receba o orçamento",
-    text: "Nossa equipe avalia e responde com prazo e valor no mesmo dia útil.",
+    title: "Escolha o melhor dia",
+    text: "Nossa equipe avalia, passa prazo e valor e reserva o seu horário.",
   },
   {
     icon: ShieldCheck,
-    title: "Agende e retire",
-    text: "Deixe o veículo na unidade mais próxima e retire pronto na data combinada.",
+    title: "Deixe o carro e retire",
+    text: "Traga o veículo na unidade mais próxima e retire pronto na data combinada.",
   },
 ];
 
@@ -51,7 +51,7 @@ export const FinalCta = () => (
           <div className="min-w-0 p-8 text-center sm:p-12 lg:text-left">
             <Reveal>
               <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-gold-700/30 bg-gold-700/[0.06] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-gold-700 sm:px-4 sm:text-[11px] sm:tracking-[0.22em]">
-                Orçamento sem compromisso
+                Agende pelo WhatsApp
               </span>
             </Reveal>
 
@@ -79,7 +79,7 @@ export const FinalCta = () => (
                   className="shimmer inline-flex h-15 w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-gold-grad px-7 py-4 text-[15px] font-extrabold text-ink shadow-[0_18px_44px_-16px_rgba(217,182,78,0.9)] transition-transform duration-300 hover:-translate-y-0.5 sm:w-auto sm:px-8"
                 >
                   <MessageCircle className="h-5 w-5" />
-                  Falar com um especialista
+                  Agendar meu horário
                 </a>
                 <a
                   href="tel:+5563999761040"

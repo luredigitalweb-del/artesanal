@@ -57,7 +57,7 @@ export const Hero = () => (
               className="shimmer inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-full bg-gold-grad px-8 text-[15px] font-extrabold text-ink shadow-[0_18px_44px_-16px_rgba(217,182,78,0.85)] transition-transform duration-300 hover:-translate-y-0.5 sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
-              Fazer meu orçamento
+              Agendar meu horário
             </a>
             <a
               href="#servicos"

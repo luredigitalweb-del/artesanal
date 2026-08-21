@@ -37,7 +37,7 @@ const REPAROS = [
     ],
     prazo: "",
     garantia: "",
-    cta: "Orçar meu martelinho",
+    cta: "Agendar meu martelinho",
     destaque: true,
   },
   {
@@ -52,7 +52,7 @@ const REPAROS = [
     ],
     prazo: "",
     garantia: "",
-    cta: "Orçar minha pintura",
+    cta: "Agendar minha pintura",
     destaque: false,
   },
 ];
@@ -281,7 +281,7 @@ export const Services = () => {
             className="shimmer inline-flex h-13 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-gold-grad px-7 py-3.5 text-sm font-extrabold text-ink transition-transform duration-300 hover:-translate-y-0.5 sm:w-auto"
           >
             <Camera className="h-4 w-4" />
-            Mandar foto do amassado
+            Mandar foto e agendar
           </a>
         </div>
       </Reveal>
@@ -456,7 +456,7 @@ export const Services = () => {
                     : "shimmer-dark border border-ink/20 text-ink hover:border-gold-600"
                 )}
               >
-                Montar pacote {pack.name}
+                Agendar o {pack.name}
                 <ArrowUpRight className="h-4 w-4" />
               </a>
                 </div>
@@ -501,7 +501,7 @@ export const Services = () => {
 
             {/* e um span dentro do link do card, entao reage ao hover do grupo */}
             <span className="shimmer inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-gold-grad px-5 sm:h-11 sm:w-auto text-sm font-extrabold text-ink shadow-[0_10px_26px_-14px_rgba(217,182,78,0.9)] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_16px_34px_-14px_rgba(217,182,78,1)]">
-              Orçar PPF
+              Agendar PPF
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </span>
           </a>

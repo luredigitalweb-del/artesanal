@@ -75,7 +75,7 @@ export const FloatingNav = () => {
               className="shimmer hidden h-11 items-center gap-2 rounded-full bg-gold-grad px-5 text-[13px] font-extrabold text-ink transition-transform duration-300 hover:-translate-y-0.5 sm:inline-flex"
             >
               <MessageCircle className="h-4 w-4" />
-              Orçamento agora
+              Agendar agora
             </a>
 
             <button
@@ -120,7 +120,7 @@ export const FloatingNav = () => {
                 className="shimmer flex h-13 items-center justify-center gap-2 rounded-full bg-gold-grad px-6 py-3.5 text-sm font-extrabold text-ink"
               >
                 <MessageCircle className="h-4 w-4" />
-                Pedir orçamento no WhatsApp
+                Agendar meu horário
               </a>
             </li>
           </ul>

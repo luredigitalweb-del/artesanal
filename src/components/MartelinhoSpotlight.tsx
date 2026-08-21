@@ -154,7 +154,7 @@ export const MartelinhoSpotlight = () => (
             className="shimmer inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-full bg-gold-grad px-9 text-[15px] font-extrabold text-ink transition-transform duration-300 hover:-translate-y-0.5 sm:w-auto"
           >
             <MessageCircle className="h-5 w-5" />
-            Enviar foto do amassado
+            Agendar meu martelinho
           </a>
         </div>
       </Reveal>

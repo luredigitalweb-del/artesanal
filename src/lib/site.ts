@@ -5,22 +5,22 @@ export const waLink = (message: string) =>
 
 export const WA = {
   hero: waLink(
-    "Olá! Vim pelo site da Artesanal Car e quero um orçamento para o meu veículo."
+    "Olá! Vim pelo site e quero agendar um horário para o meu veículo."
   ),
   martelinho: waLink(
-    "Olá! Quero um orçamento de Martelinho de Ouro (reparo de amassado sem pintura)."
+    "Olá! Quero agendar o Martelinho de Ouro (reparo de amassado sem pintura)."
   ),
   final: waLink(
-    "Olá! Quero avaliar meu carro com a Artesanal Car e receber um orçamento."
+    "Olá! Quero agendar meu horário na Artesanal Car."
   ),
   servico: (nome: string) =>
-    waLink(`Olá! Quero um orçamento de ${nome} para o meu veículo.`),
+    waLink(`Olá! Quero agendar ${nome} para o meu veículo.`),
   pacote: (nome: string) =>
     waLink(
-      `Olá! Quero um orçamento do pacote ${nome} para o meu veículo.`
+      `Olá! Quero agendar o pacote ${nome} para o meu veículo.`
     ),
   unidade: (cidade: string) =>
-    waLink(`Olá! Quero atendimento na unidade de ${cidade}.`),
+    waLink(`Olá! Quero agendar atendimento na unidade de ${cidade}.`),
 };
 
 export const INSTAGRAM_URL = "https://instagram.com/artesanalcar.martelinho";

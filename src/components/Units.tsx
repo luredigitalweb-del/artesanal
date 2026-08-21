@@ -44,7 +44,7 @@ export const Units = () => (
             padrão de entrega
           </>
         }
-        description="Escolha a unidade mais perto de você e fale direto com a equipe pelo WhatsApp."
+        description="Escolha a unidade mais perto de você e agende direto com a equipe pelo WhatsApp."
       />
 
       <div className="mt-14 grid gap-5 lg:grid-cols-3">
@@ -87,7 +87,7 @@ export const Units = () => (
                   className="shimmer inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-gold-grad px-5 text-[13px] font-extrabold text-ink transition-transform duration-300 hover:-translate-y-0.5"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  WhatsApp
+                  Agendar aqui
                 </a>
                 <a
                   href={unit.maps}
