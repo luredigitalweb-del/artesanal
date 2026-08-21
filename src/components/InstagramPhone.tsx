@@ -63,7 +63,7 @@ export const InstagramPhone = () => (
             <div className="relative overflow-hidden rounded-[2.35rem] bg-black">
               <div className="pointer-events-none absolute left-1/2 top-[9px] z-30 h-[26px] w-[92px] -translate-x-1/2 rounded-full bg-black" />
 
-              <div className="phone-scroll h-[700px] overflow-y-auto overscroll-contain">
+              <div className="phone-scroll h-[678px] overflow-y-auto overscroll-contain">
             <div className="sticky top-0 z-20 bg-black/95 backdrop-blur">
               <div className="flex items-center justify-between px-6 pb-1 pt-3 text-[12px] font-semibold text-white">
                 <span>12:42</span>
@@ -195,7 +195,7 @@ export const InstagramPhone = () => (
               </span>
             </div>
 
-            <div className="grid grid-cols-3 gap-[2px] pb-[26px]">
+            <div className="grid grid-cols-3 gap-[2px] pb-2">
               {POSTS.map((post, i) => (
                 <a
                   key={post.src}
@@ -221,12 +221,12 @@ export const InstagramPhone = () => (
               ))}
             </div>
 
-                {/* Indicador de home: fica colado no rodape da tela do aparelho.
-                    A altura precisa casar com o respiro da grade acima, senao
-                    o degrade avanca sobre a ultima fileira de posts. */}
-                <div className="sticky bottom-0 flex h-[26px] items-end justify-center bg-gradient-to-t from-black via-black/70 to-transparent pb-1.5">
-                  <span className="h-1 w-24 rounded-full bg-white/70" />
-                </div>
+              </div>
+
+              {/* Indicador de home: faixa propria no rodape do aparelho, fora da
+                  area rolavel. Dentro dela ficava fixo por cima dos posts. */}
+              <div className="flex h-[22px] items-center justify-center bg-black">
+                <span className="h-1 w-24 rounded-full bg-white/70" />
               </div>
             </div>
           </div>
